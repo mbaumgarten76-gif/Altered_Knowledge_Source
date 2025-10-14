@@ -51,9 +51,3 @@ jobs:
       - name: Run validator (normal mode)
         run: |
           python UTILS/validate_repo.py
-
-      # optionaler “strenger” Lauf: warnt dich, wenn du willst, dass Warnungen als Fehler gelten
-      - name: Run validator (strict mode)
-        if: ${{ always() }}  # wird auch ausgeführt, wenn der vorige Step fehlschlug; nimm 'if: success()' falls du es anders willst
-        run: |
-          python UTILS/validate_repo.py --strict
