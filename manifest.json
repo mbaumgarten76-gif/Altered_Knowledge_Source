@@ -1,0 +1,105 @@
+{
+  "version": "1.1",
+  "description": "Comprehensive index for Altered TCG knowledge base",
+  "structure": {
+    "root": {
+      "cards": "CARDS",
+      "rules": "RULES",
+      "collection": "COLLECTION",
+      "history": "HISTORY",
+      "decks": "DECKS"
+    },
+
+    "cards": {
+      "languages": {
+        "DE": {
+          "sets": {
+            "ALIZE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "BISE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "CORE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "COREKS": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "CYCLONE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "MUSUBI": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "TCS3": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "WCQ25": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "WCS25": ["AX", "BR", "LY", "MU", "OR", "YZ"]
+          }
+        },
+        "EN": {
+          "sets": {
+            "ALIZE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "BISE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "CORE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "COREKS": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "CYCLONE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "MUSUBI": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "TCS3": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "WCQ25": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+            "WCS25": ["AX", "BR", "LY", "MU", "OR", "YZ"]
+          }
+        }
+      },
+      "naming_convention": "ALT_<SET>_<RARITY>_<FACTION>_<CARDID>_<SUFFIX>.json",
+      "examples": [
+        "CARDS/DE/ALIZE/AX/ALT_ALIZE_A_AX_35_C.json",
+        "CARDS/EN/CORE/YZ/ALT_CORE_B_YZ_31_C.json"
+      ]
+    },
+
+    "rules": {
+      "files": [
+        "RULES/Altered_Complete_Rules_4.0.pdf",
+        "RULES/kurzregel_deutsch.pdf",
+        "RULES/constructed_rules.json",
+        "RULES/altered_keyword_abilities_en.json",
+        "RULES/Itered_keywords_en.json"
+      ],
+      "purpose": "Contains official and derived game rules, both English and German."
+    },
+
+    "collection": {
+      "files": [
+        "COLLECTION/collection_ALIZE.json",
+        "COLLECTION/collection_BISE.json",
+        "COLLECTION/collection_CORE.json",
+        "COLLECTION/collection_CYCLONE.json"
+      ],
+      "purpose": "Represents user's owned card quantities per set."
+    },
+
+    "history": {
+      "files": [
+        "HISTORY/cards_history_ALIZE.json",
+        "HISTORY/cards_history_BISE.json",
+        "HISTORY/cards_history_CORE.json",
+        "HISTORY/cards_history_CYCLONE.json"
+      ],
+      "purpose": "Tracks historical changes, errata, and balancing updates for each set."
+    },
+
+    "decks": {
+      "files": [
+        "DECKS/sample_decks.json"
+      ],
+      "purpose": "Example decklists or user-defined deck data."
+    }
+  },
+
+  "load_instructions": {
+    "preferred_language": "DE",
+    "fallback_language": "EN",
+    "load_strategy": "on-demand",
+    "rules_priority": [
+      "constructed_rules.json",
+      "altered_keyword_abilities_en.json",
+      "Itered_keywords_en.json"
+    ],
+    "collection_usage": "count-only",
+    "card_indexing": {
+      "group_by": ["language", "set", "faction"],
+      "index_key": "card_id"
+    },
+    "history_reference": "use to track balance updates per card",
+    "ignore_extensions": [".pdf", ".md"]
+  }
+}
