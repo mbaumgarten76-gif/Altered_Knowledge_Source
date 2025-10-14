@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "rules": {
+    "card_file": {
+      "required_fields": ["id", "name", "type", "cost", "effect", "rarity", "set", "faction"],
+      "id_pattern": "^ALT_[A-Z]+_[ABP]_[A-Z]{2}_[0-9]{2,3}_[A-Z0-9_]+$",
+      "allowed_rarities": ["C", "R", "U"],
+      "notes": "Jede Karte muss eindeutige ID, Fraktion und Set-Information haben."
+    },
+    "collection_file": {
+      "required_fields": ["card_id", "count", "set", "rarity"],
+      "count_min": 0,
+      "count_max": 99,
+      "notes": "collection.json beschreibt ausschließlich Besitzstand, keine Kartentexte."
+    },
+    "deck_file": {
+      "required_fields": ["deck_name", "hero_id", "faction", "cards"],
+      "constraints": {
+        "min_cards": 40,
+        "max_cards": 60,
+        "unique_hero": true,
+        "max_same_card": 3,
+        "max_rare_cards": 15,
+        "max_unique_cards": 3,
+        "same_faction_as_hero": true
+      },
+      "notes": "Regelkonforme Constructed-Decks nach offiziellen Vorgaben."
+    },
+    "rules_file": {
+      "accepted_formats": [".json", ".pdf"],
+      "required_keywords": ["keyword", "effect", "definition"],
+      "notes": "Regeldateien müssen strukturierte Begriffe oder Textabschnitte enthalten."
+    }
+  }
+}

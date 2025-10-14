@@ -1,105 +1,105 @@
 {
-  "version": "1.1",
-  "description": "Comprehensive index for Altered TCG knowledge base",
-  "structure": {
-    "root": {
-      "cards": "CARDS",
-      "rules": "RULES",
-      "collection": "COLLECTION",
-      "history": "HISTORY",
-      "decks": "DECKS"
-    },
+  "name": "Altered Knowledge Source",
+  "version": "1.0.0",
+  "updated_at": "2025-10-14",
+  "description": "Index der Datenquellen (Karten, Regeln, Sammlung, Decks, Historie) für Altered TCG.",
 
-    "cards": {
-      "languages": {
-        "DE": {
-          "sets": {
-            "ALIZE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "BISE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "CORE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "COREKS": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "CYCLONE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "MUSUBI": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "TCS3": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "WCQ25": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "WCS25": ["AX", "BR", "LY", "MU", "OR", "YZ"]
-          }
-        },
-        "EN": {
-          "sets": {
-            "ALIZE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "BISE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "CORE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "COREKS": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "CYCLONE": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "MUSUBI": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "TCS3": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "WCQ25": ["AX", "BR", "LY", "MU", "OR", "YZ"],
-            "WCS25": ["AX", "BR", "LY", "MU", "OR", "YZ"]
-          }
-        }
-      },
-      "naming_convention": "ALT_<SET>_<RARITY>_<FACTION>_<CARDID>_<SUFFIX>.json",
-      "examples": [
-        "CARDS/DE/ALIZE/AX/ALT_ALIZE_A_AX_35_C.json",
-        "CARDS/EN/CORE/YZ/ALT_CORE_B_YZ_31_C.json"
-      ]
-    },
+  "cards": {
+    "languages": ["DE", "EN"],
+    "sets": ["CORE", "ALIZE", "BISE", "CYCLONE", "MUSUBI", "TCS3", "WCQ25", "WCS25"],
+    "factions": ["AX", "BR", "LY", "MU", "OR", "YZ"],
 
-    "rules": {
-      "files": [
-        "RULES/Altered_Complete_Rules_4.0.pdf",
-        "RULES/kurzregel_deutsch.pdf",
-        "RULES/constructed_rules.json",
-        "RULES/altered_keyword_abilities_en.json",
-        "RULES/Itered_keywords_en.json"
+    "patterns": [
+      "CARDS/DE/*/*/*.json",
+      "CARDS/EN/*/*/*.json"
+    ],
+
+    "notes": "Jede Karte liegt als eigene JSON unter CARDS/{LANG}/{SET}/{FACTION}/<CARD_ID>.json"
+  },
+
+  "collection": {
+    "files": [
+      "COLLECTION/collection_CORE.json",
+      "COLLECTION/collection_ALIZE.json",
+      "COLLECTION/collection_BISE.json",
+      "COLLECTION/collection_CYCLONE.json"
+    ],
+    "optional_files": [
+      "COLLECTION/collection_summary.json"
+    ],
+    "notes": "Sammlungsdateien enthalten nur Besitzstand (count, set, rarity) – keine Regeltexte."
+  },
+
+  "decks": {
+    "my_own_path": "DECKS/MYOWN",
+    "other_path": "DECKS/OTHER",
+    "patterns": [
+      "DECKS/MYOWN/*.json",
+      "DECKS/OTHER/*.json"
+    ],
+    "schema_hint": {
+      "deck_name": "string",
+      "hero_id": "string",
+      "faction": "AX|BR|LY|MU|OR|YZ",
+      "cards": [
+        { "card_id": "string", "count": 1 }
       ],
-      "purpose": "Contains official and derived game rules, both English and German."
-    },
-
-    "collection": {
-      "files": [
-        "COLLECTION/collection_ALIZE.json",
-        "COLLECTION/collection_BISE.json",
-        "COLLECTION/collection_CORE.json",
-        "COLLECTION/collection_CYCLONE.json"
-      ],
-      "purpose": "Represents user's owned card quantities per set."
-    },
-
-    "history": {
-      "files": [
-        "HISTORY/cards_history_ALIZE.json",
-        "HISTORY/cards_history_BISE.json",
-        "HISTORY/cards_history_CORE.json",
-        "HISTORY/cards_history_CYCLONE.json"
-      ],
-      "purpose": "Tracks historical changes, errata, and balancing updates for each set."
-    },
-
-    "decks": {
-      "files": [
-        "DECKS/sample_decks.json"
-      ],
-      "purpose": "Example decklists or user-defined deck data."
+      "notes": "optional string"
     }
   },
 
-  "load_instructions": {
-    "preferred_language": "DE",
-    "fallback_language": "EN",
-    "load_strategy": "on-demand",
-    "rules_priority": [
-      "constructed_rules.json",
-      "altered_keyword_abilities_en.json",
-      "Itered_keywords_en.json"
+  "rules": {
+    "files": [
+      "RULES/Altered_Complete_Rules_4.0.pdf",
+      "RULES/constructed_rules.json",
+      "RULES/altered_keyword_actions_en.json",
+      "RULES/altered_keyword_abilities_en.json",
+      "RULES/Itered_keywords_en.json",
+      "RULES/kurzregel_deutsch.pdf"
     ],
-    "collection_usage": "count-only",
-    "card_indexing": {
-      "group_by": ["language", "set", "faction"],
-      "index_key": "card_id"
-    },
-    "history_reference": "use to track balance updates per card",
-    "ignore_extensions": [".pdf", ".md"]
+    "preferred_language_order": ["DE", "EN"]
+  },
+
+  "history": {
+    "files": [
+      "HISTORY/cards_history_CORE.json",
+      "HISTORY/cards_history_ALIZE.json",
+      "HISTORY/cards_history_BISE.json",
+      "HISTORY/cards_history_CYCLONE.json"
+    ]
+  },
+
+  "stats": {
+    "files": [
+      "STATS/altered_matchlog.xlsx",
+      "STATS/deck_performance.json"
+    ],
+    "folders": [
+      "STATS/charts"
+    ],
+    "optional": true
+  },
+
+  "utils": {
+    "files": [
+      "UTILS/import_from_api.py",
+      "UTILS/merge_collections.py",
+      "UTILS/validate_deck_rules.py",
+      "UTILS/export_summary_json.py"
+    ],
+    "optional": true
+  },
+
+  "ignore_patterns": [
+    "**/*_FOILER_*.json",
+    "**/*_TOKEN_*.json",
+    "**/*_U_*.json"
+  ],
+
+  "conventions": {
+    "card_id_format": "ALT_<SET>_B_<FACTION>_<NN>_<RARITY>",
+    "sets_uppercase": true,
+    "factions_uppercase": true,
+    "separate_languages": true
   }
 }
