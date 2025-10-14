@@ -1,0 +1,108 @@
+{
+  "name": "Altered Knowledge Source",
+  "version": "1.0.0",
+  "updated_at": "2025-10-14",
+  "description": "Index der Datenquellen (Karten, Regeln, Sammlung, Decks, Historie) für Altered TCG.",
+
+  "cards": {
+    "languages": ["DE", "EN"],
+    "sets": ["CORE", "ALIZE", "BISE", "CYCLONE", "MUSUBI", "TCS3", "WCQ25", "WCS25"],
+    "factions": ["AX", "BR", "LY", "MU", "OR", "YZ"],
+
+    "patterns": [
+      "CARDS/DE/*/*/*.json",
+      "CARDS/EN/*/*/*.json"
+    ],
+
+    "notes": "Jede Karte liegt als eigene JSON unter CARDS/{LANG}/{SET}/{FACTION}/<CARD_ID>.json"
+  },
+
+  "collection": {
+    "files": [
+      "COLLECTION/collection_CORE.json",
+      "COLLECTION/collection_ALIZE.json",
+      "COLLECTION/collection_BISE.json",
+      "COLLECTION/collection_CYCLONE.json"
+    ],
+    "optional_files": [
+      "COLLECTION/collection_summary.json"
+    ],
+    "notes": "Sammlungsdateien enthalten nur Besitzstand (count, set, rarity) – keine Regeltexte."
+  },
+
+  "decks": {
+    "my_own_path": "DECKS/MYOWN",
+    "other_path": "DECKS/OTHER",
+    "patterns": [
+      "DECKS/MYOWN/*.json",
+      "DECKS/OTHER/*.json"
+    ],
+    "schema_hint": {
+      "deck_name": "string",
+      "hero_id": "string",
+      "faction": "AX|BR|LY|MU|OR|YZ",
+      "cards": [
+        { "card_id": "string", "count": 1 }
+      ],
+      "notes": "optional string"
+    }
+  },
+
+  "rules": {
+    "files": [
+      "RULES/Altered_Complete_Rules_4.0.pdf",
+      "RULES/constructed_rules.json",
+      "RULES/altered_keyword_actions_en.json",
+      "RULES/altered_keyword_abilities_en.json",
+      "RULES/Itered_keywords_en.json",
+      "RULES/kurzregel_deutsch.pdf"
+    ],
+    "preferred_language_order": ["DE", "EN"]
+  },
+
+  "history": {
+    "files": [
+      "HISTORY/cards_history_CORE.json",
+      "HISTORY/cards_history_ALIZE.json",
+      "HISTORY/cards_history_BISE.json",
+      "HISTORY/cards_history_CYCLONE.json"
+    ]
+  },
+
+  "stats": {
+    "files": [
+      "STATS/altered_matchlog.xlsx",
+      "STATS/deck_performance.json"
+    ],
+    "folders": [
+      "STATS/charts"
+    ],
+    "optional": true
+  },
+
+  "utils": {
+    "files": [
+      "UTILS/import_from_api.py",
+      "UTILS/merge_collections.py",
+      "UTILS/validate_deck_rules.py",
+      "UTILS/export_summary_json.py"
+    ],
+    "optional": true
+  },
+
+  "ignore_patterns": [
+    "**/*_FOILER_*.json",
+    "**/*_TOKEN_*.json",
+    "**/*_U_*.json"
+  ],
+
+  "conventions": {
+    "card_id_format": "ALT_<SET>_B_<FACTION>_<NN>_<RARITY>",
+    "sets_uppercase": true,
+    "factions_uppercase": true,
+    "separate_languages": true
+  }
+  
+  
+}
+
