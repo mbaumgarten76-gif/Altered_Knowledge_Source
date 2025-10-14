@@ -1,0 +1,16 @@
+version: 1
+load:
+  - SETS/CORE_DE.json
+  - SETS/ALIZE_DE.json
+  - SETS/BISE_DE.json
+  - SETS/CYCLONE_DE.json
+  - COLLECTION/collection_CORE.json
+  - COLLECTION/collection_ALIZE.json
+  - COLLECTION/collection_BISE.json
+  - COLLECTION/collection_CYCLONE.json
+  - RULES/Altered_Complete_Rules_4.0.pdf
+  - RULES/altered-jenseits-der-tore-3760397180248-regel.pdf
+  - RULES/altered_keyword_abilities_en.json
+- RULES/constructed_rules.json
+- RULES/Itered_keywords_en.json
+

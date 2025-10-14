@@ -1,0 +1,18 @@
+Chat_Aufrufe
+
+Bitte synchronisiere dein Wissen mit meinem Repo.
+SETS (DE):
+- https://raw.githubusercontent.com/<user>/<repo>/main/SETS/CORE/CORE_DE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/SETS/ALIZE/ALIZE_DE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/SETS/BISE/BISE_DE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/SETS/CYCLONE/CYCLONE_DE.json
+
+COLLECTION:
+- https://raw.githubusercontent.com/<user>/<repo>/main/COLLECTION/collection_CORE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/COLLECTION/collection_ALIZE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/COLLECTION/collection_BISE.json
+- https://raw.githubusercontent.com/<user>/<repo>/main/COLLECTION/collection_CYCLONE.json
+
+RULES (optional):
+- https://raw.githubusercontent.com/<user>/<repo>/main/RULES/Altered_Complete_Rules_4.0.pdf
+- https://raw.githubusercontent.com/<user>/<repo>/main/RULES/constructed_rules.json

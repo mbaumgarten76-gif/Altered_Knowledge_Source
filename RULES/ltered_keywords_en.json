@@ -1,0 +1,206 @@
+[
+  {
+    "keyword": "Activate",
+    "category": "Keyword Action",
+    "definition_en": "An event activates a Reaction if it matches that Reaction’s trigger, creating an Emblem-Reaction. Some steps explicitly activate Reactions, even if triggers do not match. Effects that say 'Activate [a trigger]' mean 'Activate a Reaction with that trigger'. If an ability of an object activates a Reaction of another, the Reaction is created by the second object. Some abilities prevent specific triggers from activating.",
+    "notes": "Summarizes Rules 7.3.1.a–e."
+  },
+  {
+    "keyword": "After You",
+    "category": "Keyword Action",
+    "definition_en": "‘After you’ means to end the turn once there are no Reactions in Limbo. It is not considered passing.",
+    "notes": "Summarizes Rules 7.3.2.a–b."
+  },
+  {
+    "keyword": "Ascend",
+    "category": "Keyword Action",
+    "definition_en": "If an Expedition ascends, it gains the 'Ascended' status.",
+    "notes": "Summarizes Rule 7.3.3.a."
+  },
+  {
+    "keyword": "Augment",
+    "category": "Keyword Action",
+    "definition_en": "To augment a card or an object means having it gain one more of a single counter it already has.",
+    "notes": "Summarizes Rule 7.3.4.a."
+  },
+  {
+    "keyword": "Create",
+    "category": "Keyword Action",
+    "definition_en": "To create a token is to put a new Character token in the Expedition zone. Costs and effects that create tokens follow the template: 'Create a [name] [x/y/z] [sub-types] token with [abilities] in [expedition]'.",
+    "notes": "Summarizes Rules 7.3.5.a–b."
+  },
+  {
+    "keyword": "Defect",
+    "category": "Keyword Action",
+    "definition_en": "When an object in an Expedition defects, it is moved to the Expedition facing it.",
+    "notes": "Summarizes Rule 7.3.6.a."
+  },
+  {
+    "keyword": "Discard",
+    "category": "Keyword Action",
+    "definition_en": "To discard an object or card is to move that object or card from its current zone to the Discard pile.",
+    "notes": "Summarizes Rule 7.3.7.a."
+  },
+  {
+    "keyword": "Double (counters)",
+    "category": "Keyword Action",
+    "definition_en": "To double the [name] counters of an object means having that object gain the same number of that counter it already had. It is impossible to double 0 counters.",
+    "notes": "Summarizes Rules 7.3.8.a–b."
+  },
+  {
+    "keyword": "Draw",
+    "category": "Keyword Action",
+    "definition_en": "To draw X cards is to move the top X cards of one’s Deck to their Hand. 'Draw a card' means 'draw 1 card'.",
+    "notes": "Summarizes Rules 7.3.9.a–b."
+  },
+  {
+    "keyword": "Exchange (boosts)",
+    "category": "Keyword Action",
+    "definition_en": "To exchange the boosts of two characters means having each of them simultaneously gain or lose the difference in their number of boosts — the one with the most boosts loses that amount, the one with the least boosts gains it. If both characters have the same number of boosts, nothing happens.",
+    "notes": "Summarizes Rules 7.3.10.a–b."
+  },
+  {
+    "keyword": "Exchange (objects or cards)",
+    "category": "Keyword Action",
+    "definition_en": "To exchange two objects or cards is to move each of them to the other's zone. If one or both of the objects cannot be determined, the exchange cannot happen.",
+    "notes": "Summarizes Rules 7.3.11.a–b."
+  },
+  {
+    "keyword": "Exhaust",
+    "category": "Keyword Action",
+    "definition_en": "To exhaust an object means to have it gain the 'exhausted' status. The symbol 'T' in the cost of a quick action means 'exhaust me'.",
+    "notes": "Summarizes Rules 7.3.12.a–b."
+  },
+  {
+    "keyword": "Exhausted Resupply",
+    "category": "Keyword Action",
+    "definition_en": "When a player performs 'Exhausted Resupply', they Resupply, then exhaust the resupplied card.",
+    "notes": "Summarizes Rule 7.3.13.a."
+  },
+  {
+    "keyword": "Gain (counters)",
+    "category": "Keyword Action",
+    "definition_en": "When an object gains X [name] counters, X counters of that name are put on that object. Counters with the same name on the same object are fungible; they do not need to be distinguished from one another.",
+    "notes": "Summarizes Rules 7.3.14.a–b."
+  },
+  {
+    "keyword": "Gain (status)",
+    "category": "Keyword Action",
+    "definition_en": "When an object gains a status, it has that status from that point onward. An object with a given status cannot gain that status again. In particular, it is impossible to exhaust an already exhausted object.",
+    "notes": "Summarizes Rules 7.3.15.a–b."
+  },
+  {
+    "keyword": "Give (boost)",
+    "category": "Keyword Action",
+    "definition_en": "Giving one or more boosts to a Character is equivalent to that Character gaining that many boosts.",
+    "notes": "Summarizes Rule 7.3.16.a."
+  },
+  {
+    "keyword": "Have (object) do",
+    "category": "Keyword Action",
+    "definition_en": "Some effects state that a player may have an object do something. If the player decides to have the object do that thing, it is equivalent to the object itself doing it.",
+    "notes": "Summarizes Rule 7.3.17.a."
+  },
+  {
+    "keyword": "Ignore",
+    "category": "Keyword Action",
+    "definition_en": "Some passive abilities state that certain abilities should be ignored during a given period. During that period, these abilities still exist but have no effect: passive abilities do not modify events, quick actions may not be played, and Reactions do not activate.",
+    "notes": "Summarizes Rules 7.3.18.a–b."
+  },
+  {
+    "keyword": "Lose (status)",
+    "category": "Keyword Action",
+    "definition_en": "When an object loses a status, it ceases to have that status from that point onward. An object without a given status cannot lose that status.",
+    "notes": "Summarizes Rules 7.3.19.a–b."
+  },
+  {
+    "keyword": "Move (Terrain Marker)",
+    "category": "Keyword Action",
+    "definition_en": "When a Terrain Marker is moved, it may be moved to the region it is already in unless stated otherwise. When a Terrain Marker is moved, it becomes a new object, even if it is moved to the same region.",
+    "notes": "Summarizes Rules 7.3.20.a–b."
+  },
+  {
+    "keyword": "Move Backwards",
+    "category": "Keyword Action",
+    "definition_en": "To move an Expedition backward means to move its counter from its current region to the next region in the direction from which it came. If the Expedition is already in its region of origin or the Arena, nothing happens. If it would move backward farther than its origin, it moves only as far as needed to reach it.",
+    "notes": "Summarizes Rules 7.3.21.a–d."
+  },
+  {
+    "keyword": "Move Forward",
+    "category": "Keyword Action",
+    "definition_en": "To move an Expedition forward means to move its counter from its current region to the next region in the direction it is going. If moving would reveal a face-down Tumult card, it is revealed and the Expedition continues. If it would move beyond the opposite region or from the Arena, nothing happens.",
+    "notes": "Summarizes Rules 7.3.22.a–e."
+  },
+  {
+    "keyword": "Play For Free",
+    "category": "Keyword Action",
+    "definition_en": "To play a card or quick action for free means to play it while skipping the declaration of how costs will be paid and skipping payment of those costs.",
+    "notes": "Summarizes Rule 7.3.23.a."
+  },
+  {
+    "keyword": "Put",
+    "category": "Keyword Action",
+    "definition_en": "To put an object or card in a zone means to move that object or card to that zone. 'Put', 'return', and 'send' are synonyms rules-wise.",
+    "notes": "Summarizes Rules 7.3.24.a–b."
+  },
+  {
+    "keyword": "Ready",
+    "category": "Keyword Action",
+    "definition_en": "To ready an object means that it loses the 'Exhausted' status. An object that is not exhausted cannot be readied.",
+    "notes": "Summarizes Rules 7.3.25.a–b."
+  },
+  {
+    "keyword": "Resupply",
+    "category": "Keyword Action",
+    "definition_en": "To resupply is to put the top card of one’s Deck into one’s Reserve. If a player with an empty Deck would resupply, they shuffle their Discard pile into their Deck before putting the top card into the Reserve. If the Deck is still empty, nothing happens.",
+    "notes": "Summarizes Rules 7.3.26.a–b."
+  },
+  {
+    "keyword": "Return",
+    "category": "Keyword Action",
+    "definition_en": "To return an object to a zone means to move that object to that zone. It does not matter whether it was in that zone earlier. 'Put', 'return', and 'send' are synonyms rules-wise.",
+    "notes": "Summarizes Rules 7.3.27.a–c."
+  },
+  {
+    "keyword": "Roll a Die",
+    "category": "Keyword Action",
+    "definition_en": "To roll a die means to roll a fair six-sided die and note the result. Some effects then use that result. Some passive abilities allow multiple dice to be rolled and one to be chosen or modified; the player may look at all results before deciding.",
+    "notes": "Summarizes Rules 7.3.28.a–c."
+  },
+  {
+    "keyword": "Rush",
+    "category": "Keyword Action",
+    "definition_en": "To Rush means to play a card immediately. In effects that say a player may Rush to do something, they may only do it if they actually played a card due to Rush.",
+    "notes": "Summarizes Rules 7.3.29.a–b."
+  },
+  {
+    "keyword": "Sabotage",
+    "category": "Keyword Action",
+    "definition_en": "To sabotage means to discard up to one target card in a Reserve.",
+    "notes": "Summarizes Rule 7.3.30.a."
+  },
+  {
+    "keyword": "Sacrifice",
+    "category": "Keyword Action",
+    "definition_en": "When a player has to sacrifice an object, they must discard an object in play that they control. Even if the discard atomic action is modified, it is still considered a sacrifice.",
+    "notes": "Summarizes Rules 7.3.31.a–b."
+  },
+  {
+    "keyword": "Send",
+    "category": "Keyword Action",
+    "definition_en": "To send an object to a zone means to move that object to that zone. 'Put', 'return', and 'send' are synonyms rules-wise.",
+    "notes": "Summarizes Rules 7.3.32.a–b."
+  },
+  {
+    "keyword": "Spend (counters)",
+    "category": "Keyword Action",
+    "definition_en": "When an object spends X of its [name] counters, X counters of that name are removed from it. An object cannot spend more counters than it has.",
+    "notes": "Summarizes Rules 7.3.33.a–b."
+  },
+  {
+    "keyword": "Switch Expeditions",
+    "category": "Keyword Action",
+    "definition_en": "To switch expeditions means to send an object from one Expedition to the other of the same player. A Character that switches Expeditions leaves its former Expedition and joins its new one but does not leave the Expedition zone.",
+    "notes": "Summarizes Rules 7.3.34.a–b."
+  }
+]

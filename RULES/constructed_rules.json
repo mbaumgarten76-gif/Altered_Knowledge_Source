@@ -1,0 +1,11 @@
+{
+  "deck_type": "Constructed",
+  "deck_size_min": 40,
+  "deck_size_max": 60,
+  "exact_heroes": 1,
+  "same_faction_as_hero": true,
+  "max_copies_per_name": 3,
+  "max_rare_cards": 15,
+  "max_unique_cards": 3,
+  "description": "Ein Constructed-Deck in Altered besteht aus 40–60 Karten, genau einer Heldenkarte und nur Karten derselben Fraktion wie der Held. Maximal 3 Exemplare pro Kartenname, maximal 15 seltene (rare) und maximal 3 einzigartige (unique) Karten."
+}

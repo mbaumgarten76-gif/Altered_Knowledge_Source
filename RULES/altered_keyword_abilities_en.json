@@ -1,0 +1,44 @@
+[
+  {
+    "keyword": "Cooldown",
+    "category": "Keyword Ability",
+    "definition_en": "Cooldown is a passive ability that appears on Spells. A Spell with Cooldown that goes to the Reserve after its resolution becomes exhausted. Cooldown itself does nothing directly, but Rule 5.2.4.b adds an extra step for Spells with Cooldown.",
+    "notes": "Summarizes Rules 7.4.1.a–c."
+  },
+  {
+    "keyword": "Defender",
+    "category": "Keyword Ability",
+    "definition_en": "Defender is a passive ability that appears on Characters. An Expedition containing a Character with Defender cannot move forward during Dusk. Defender applies to any reason an Expedition might move forward during Dusk, not only the Progress daily effect.",
+    "notes": "Summarizes Rules 7.4.2.a–c."
+  },
+  {
+    "keyword": "Eternal",
+    "category": "Keyword Ability",
+    "definition_en": "Eternal is a passive ability that appears on Characters. An Eternal Character is not sent to the Reserve during Rest.",
+    "notes": "Summarizes Rules 7.4.3.a–b."
+  },
+  {
+    "keyword": "Gigantic",
+    "category": "Keyword Ability",
+    "definition_en": "Gigantic is a passive ability that appears on Characters. A Gigantic object is present in both Expeditions of its controller. When a player plays a card with Gigantic or creates a token with Gigantic, it is played or created in one Expedition but joins both. Its triggers (join, leave, ready) happen only once. Its statistics are counted in both Expeditions, and any effect referring to its Expedition applies to both. When it defects, the physical card moves to the opposite Expedition. During tiebreakers, its statistics count twice. If a non-Gigantic Character gains Gigantic, it joins both Expeditions; if it loses Gigantic, it stays only in the Expedition containing its card.",
+    "notes": "Summarizes Rules 7.4.4.a–p. Gigantic causes a single object to exist in both Expeditions, with shared triggers and dual presence logic."
+  },
+  {
+    "keyword": "Scout X",
+    "category": "Keyword Ability",
+    "definition_en": "Scout is a passive ability that appears on Character or Permanent cards and functions while the card is in Hand. When a player plays a card with 'Scout X' from Hand, during the declaration of intent they may pay X mana as an alternative cost instead of the normal Hand cost. If they do, as the card enters the Expedition or Landmark zone, it gains the ability 'Exhaust: Send me to Reserve'. Cost alterations still apply. Reactions triggered by playing a Character with Scout can locate that Character in Reserve, even if it is not the original source of the Reaction.",
+    "notes": "Summarizes Rules 7.4.5.a–e. Scout allows alternative deployment at a reduced cost with a built-in self-transfer to Reserve."
+  },
+  {
+    "keyword": "Seasoned",
+    "category": "Keyword Ability",
+    "definition_en": "Seasoned is a passive ability that appears on Characters. If an object with Seasoned would move from the Expedition zone to the Reserve, it keeps its boosts as it moves. Seasoned applies to any movement from the Expedition zone to the Reserve, including but not limited to the Rest daily effect at Dusk.",
+    "notes": "Summarizes Rules 7.4.6.a–c. Seasoned preserves a Character’s boosts when it transitions from Expedition to Reserve."
+  },
+  {
+    "keyword": "Tough X",
+    "category": "Keyword Ability",
+    "definition_en": "Tough is a passive ability that appears on Characters and Permanents. It is always followed by a number. Tough X means: 'In order to choose me as a target of an effect they control, your opponent must also pay X.' A player is never forced to pay a Tough cost, even if all potential targets have Tough. The decision to pay X is made before resolving a step. The Tough cost is paid only once per effect, regardless of how many times the object is chosen as target.",
+    "notes": "Summarizes Rules 7.4.7.a–f. Tough provides an additional targeting tax that discourages or limits direct effects on the protected object."
+  }
+]

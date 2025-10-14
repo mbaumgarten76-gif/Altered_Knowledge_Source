@@ -1,0 +1,88 @@
+{
+  "ALT_WCQ25_P_BR_06_R1": {
+    "@context": {
+      "@vocab": "https://api.altered.gg/?_format=jsonld#",
+      "hydra": "http://www.w3.org/ns/hydra/core#",
+      "news": "CardHistoryData/news",
+      "cardHistories": "CardHistoryData/cardHistories"
+    },
+    "@type": "CardHistoryData",
+    "@id": "/.well-known/genid/b489220c28dde01347cb",
+    "news": {
+      "@type": "CardHistory",
+      "@id": "/.well-known/genid/37f3815c7848207d1e8e",
+      "id": "39",
+      "fromDate": "2024-06-20T10:25:20+00:00",
+      "type": "FUNCTIONAL_ERRATUM",
+      "name": "Erratum of Tiny Jinn",
+      "answer": "The first printing of Common and Rare Tiny Jinn said  \"When I leave the Expedition zone, if I'm [Boosted] — Put me in my owner's Mana zone (as an exhausted Mana Orb).  {R} I gain 1 boost.\"  Future printings will say:  \"If I would leave the Expedition zone while I'm [Boosted], put me in my owner's Mana zone instead (as an exhausted Mana Orb).  {R} I gain 1 boost.\"  This change doesn't affect Unique Tiny Jinn.",
+      "question": "Did the wording of this card change?"
+    },
+    "cardHistories": [
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/37f3815c7848207d1e8e",
+        "id": "39",
+        "fromDate": "2024-06-20T10:25:20+00:00",
+        "type": "FUNCTIONAL_ERRATUM",
+        "name": "Erratum of Tiny Jinn",
+        "answer": "The first printing of Common and Rare Tiny Jinn said  \"When I leave the Expedition zone, if I'm [Boosted] — Put me in my owner's Mana zone (as an exhausted Mana Orb).  {R} I gain 1 boost.\"  Future printings will say:  \"If I would leave the Expedition zone while I'm [Boosted], put me in my owner's Mana zone instead (as an exhausted Mana Orb).  {R} I gain 1 boost.\"  This change doesn't affect Unique Tiny Jinn.",
+        "question": "Did the wording of this card change?"
+      }
+    ]
+  },
+  "ALT_WCQ25_P_YZ_05_R1": {
+    "@context": {
+      "@vocab": "https://api.altered.gg/?_format=jsonld#",
+      "hydra": "http://www.w3.org/ns/hydra/core#",
+      "news": "CardHistoryData/news",
+      "cardHistories": "CardHistoryData/cardHistories"
+    },
+    "@type": "CardHistoryData",
+    "@id": "/.well-known/genid/89eb41a750c1ba3f53fb",
+    "news": {
+      "@type": "CardHistory",
+      "@id": "/.well-known/genid/884a50cc786331788caa",
+      "id": "184",
+      "fromDate": "2025-02-01T10:25:23+00:00",
+      "type": "SUSPENDED",
+      "name": "Suspension of Unique Moonlight Jellyfish",
+      "description": "https://www.altered.gg/news/trial-by-frost-season-patch",
+      "answer": "The Unique versions (Axiom or Yzmir) of Moonlight Jellyfish are currently suspended in all versions of Constructed Format (1vs1, 2vs2 and Free for All).  They are still legal in the following formats:  - Draft, 1vs1  - Draft, 2vs2  - Draft, Free For All  - Sealed, 1vs1  - Sealed, 2vs2  - Sealed, Free For All.  All other versions (Common Yzmir, Rare Yzmir and Rare Axiom) are still legal in every format.",
+      "question": "Which versions of Moonlight Jellyfish are legal and in which format?"
+    },
+    "cardHistories": [
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/884a50cc786331788caa",
+        "id": "184",
+        "fromDate": "2025-02-01T10:25:23+00:00",
+        "type": "SUSPENDED",
+        "name": "Suspension of Unique Moonlight Jellyfish",
+        "description": "https://www.altered.gg/news/trial-by-frost-season-patch",
+        "answer": "The Unique versions (Axiom or Yzmir) of Moonlight Jellyfish are currently suspended in all versions of Constructed Format (1vs1, 2vs2 and Free for All).  They are still legal in the following formats:  - Draft, 1vs1  - Draft, 2vs2  - Draft, Free For All  - Sealed, 1vs1  - Sealed, 2vs2  - Sealed, Free For All.  All other versions (Common Yzmir, Rare Yzmir and Rare Axiom) are still legal in every format.",
+        "question": "Which versions of Moonlight Jellyfish are legal and in which format?"
+      },
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/00d19426031e2561755a",
+        "id": "183",
+        "fromDate": "2024-10-02T10:25:23+00:00",
+        "type": "RULING",
+        "name": "Order of resolution",
+        "answer": "1. The controller of Moonlight Jellyfish declares they sacrifice it.  2. Moonlight Jellyfish reaction is triggered, depending on whether it's Fleeting or not.  3. Moonlight Jellyfish goes to the discard pile.  4. After the effect that sacrificed it is resolved, Moonlight Jellyfish reaction (or any other reactions still in Limbo at that moment) can be resolved.",
+        "question": "In which order is the effect of Moonlight Jellyfish resolved when it's sacrificed?"
+      },
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/5c89e6d150c65acc2617",
+        "id": "182",
+        "fromDate": "2024-09-06T10:25:23+00:00",
+        "type": "RULING",
+        "name": "I am becomes I was",
+        "answer": "The first printing of Moonlight Jellyfish read: \"When I'm sacrificed, if I'm not [Fleeting] — Put me in Reserve.\" Future printings will read: \"When I'm sacrificed, if I was not [Fleeting] — Put me in Reserve.\"",
+        "question": "Did the wording of this card change?"
+      }
+    ]
+  }
+}

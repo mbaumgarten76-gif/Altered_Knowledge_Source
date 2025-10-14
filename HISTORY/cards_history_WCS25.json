@@ -1,0 +1,91 @@
+{
+  "ALT_WCS25_P_OR_02_C": {
+    "@context": {
+      "@vocab": "https://api.altered.gg/?_format=jsonld#",
+      "hydra": "http://www.w3.org/ns/hydra/core#",
+      "news": "CardHistoryData/news",
+      "cardHistories": "CardHistoryData/cardHistories"
+    },
+    "@type": "CardHistoryData",
+    "@id": "/.well-known/genid/3349e93eb5c55b6cd26d",
+    "news": {
+      "@type": "CardHistory",
+      "@id": "/.well-known/genid/bd26897ceee1d890c2f3",
+      "id": "137",
+      "fromDate": "2025-02-01T10:25:22+00:00",
+      "type": "BALANCING_ERRATUM",
+      "name": "Erratum of Waru",
+      "description": "https://www.altered.gg/news/trial-by-frost-season-patch",
+      "answer": "Yes. The first printings of Waru & Mack said \"At Noon, if you control a Bureaucrat — Create an [Ordis Recruit 1/1/1] Soldier token in target Expedition.  When you play a Bureaucrat — You may have it gain [Asleep].\"  Future printings will say \"When you play a Bureaucrat — It gains [Asleep].\"\n",
+      "question": "Did the wording of this card change?"
+    },
+    "cardHistories": [
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/bd26897ceee1d890c2f3",
+        "id": "137",
+        "fromDate": "2025-02-01T10:25:22+00:00",
+        "type": "BALANCING_ERRATUM",
+        "name": "Erratum of Waru",
+        "description": "https://www.altered.gg/news/trial-by-frost-season-patch",
+        "answer": "Yes. The first printings of Waru & Mack said \"At Noon, if you control a Bureaucrat — Create an [Ordis Recruit 1/1/1] Soldier token in target Expedition.  When you play a Bureaucrat — You may have it gain [Asleep].\"  Future printings will say \"When you play a Bureaucrat — It gains [Asleep].\"\n",
+        "question": "Did the wording of this card change?"
+      }
+    ]
+  },
+  "ALT_WCS25_P_YZ_03_C": {
+    "@context": {
+      "@vocab": "https://api.altered.gg/?_format=jsonld#",
+      "hydra": "http://www.w3.org/ns/hydra/core#",
+      "news": "CardHistoryData/news",
+      "cardHistories": "CardHistoryData/cardHistories"
+    },
+    "@type": "CardHistoryData",
+    "@id": "/.well-known/genid/292bdf30dac876fa775a",
+    "news": {
+      "@type": "CardHistory",
+      "@id": "/.well-known/genid/23a43f74b4fb2aa9c8cb",
+      "id": "180",
+      "fromDate": "2025-08-11T10:25:23+00:00",
+      "type": "BALANCING_ERRATUM",
+      "name": "Balancing Erratum of Afanas",
+      "description": "https://www.altered.gg/news/whispers-from-the-maze-mid-season-patch",
+      "answer": "Yes. The first printing of this card said:  \"When you play a Spell — Target Character you control gains 1 boost. (Do this after the spell resolves.)\"  Future versions will say:  \"Spells you play with Hand Cost {1} or less have [Fleeting].  When you play a Spell — Target Character you control gains 1 boost. (Do this after the spell resolves.)\"",
+      "question": "Did the wording of this card change?"
+    },
+    "cardHistories": [
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/23a43f74b4fb2aa9c8cb",
+        "id": "180",
+        "fromDate": "2025-08-11T10:25:23+00:00",
+        "type": "BALANCING_ERRATUM",
+        "name": "Balancing Erratum of Afanas",
+        "description": "https://www.altered.gg/news/whispers-from-the-maze-mid-season-patch",
+        "answer": "Yes. The first printing of this card said:  \"When you play a Spell — Target Character you control gains 1 boost. (Do this after the spell resolves.)\"  Future versions will say:  \"Spells you play with Hand Cost {1} or less have [Fleeting].  When you play a Spell — Target Character you control gains 1 boost. (Do this after the spell resolves.)\"",
+        "question": "Did the wording of this card change?"
+      },
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/67d95625393a2097d2d2",
+        "id": "179",
+        "fromDate": "2024-09-06T10:25:23+00:00",
+        "type": "RULING",
+        "name": "Control and 2vs2",
+        "description": "https://www.altered.gg/fr-fr/news/the-formats-of-altered-multiplayer",
+        "answer": "No. You only control Characters in your Expeditions.",
+        "question": "In 2vs2, can I boost a Character controlled by my ally with Afanas & Senka?"
+      },
+      {
+        "@type": "CardHistory",
+        "@id": "/.well-known/genid/df82ec554f44be82f80a",
+        "id": "178",
+        "fromDate": "2024-02-05T10:25:23+00:00",
+        "type": "RULING",
+        "name": "Control and Reserve",
+        "answer": "No. Cards in Reserve are not controlled.",
+        "question": "Can I boost a Character in my Reserve with Afanas & Senka?"
+      }
+    ]
+  }
+}

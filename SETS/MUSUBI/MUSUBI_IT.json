@@ -1,0 +1,1322 @@
+[
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_AX_09_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/7ecea45a8e5d87971a62",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/1d1f27591f5e54917248",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/2a0ca84fd9453ba5c6f99f463568e16c.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_AX_09_C",
+    "reference": "ALT_MUSUBI_B_AX_09_C",
+    "id": "01K4W8PE2VXA59WX5M1J7Y1YRS",
+    "mainFaction": {
+      "@id": "/factions/AX",
+      "@type": "Faction",
+      "reference": "AX",
+      "color": "#8c432a",
+      "id": "01GE7AC9XBG707G19F03A95TH1",
+      "name": "Axiom"
+    },
+    "allImagePath": {
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/de_DE/ac430fde7ae054a6cb5b1d5fad285bc9.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/2a0ca84fd9453ba5c6f99f463568e16c.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/es_ES/21007504f0f9dc77d86dcf63a1fa8316.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/fr_FR/094c63ecb8980de127c7ea83b8e12b15.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/en_US/1ff7deb2c4740724eb679476164ac85a.jpg"
+    },
+    "name": "Campanellino",
+    "elements": {
+      "MAIN_COST": "3",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "3",
+      "MAIN_EFFECT": "{R} [Sabota]."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-01-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_AX_09_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/6fdc6ee24e1293ebf4d7",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/4080c236f9b14ea796ed",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/c1e84445c766d652f14a2adf856c74a4.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_AX_09_R1",
+    "reference": "ALT_MUSUBI_B_AX_09_R1",
+    "id": "01K4W8PE2XV30V3RDBMGS6PJEJ",
+    "mainFaction": {
+      "@id": "/factions/AX",
+      "@type": "Faction",
+      "reference": "AX",
+      "color": "#8c432a",
+      "id": "01GE7AC9XBG707G19F03A95TH1",
+      "name": "Axiom"
+    },
+    "allImagePath": {
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/c1e84445c766d652f14a2adf856c74a4.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/es_ES/37e17ff036bb36276a4d8b675c50ae70.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/fr_FR/ade1b89b272ce0cbcaf3b7bb5fb442d9.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/en_US/d670a886dc2ed87ddf9b0a272eb3b26b.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/de_DE/a7e6b64bb950baab8b4bf72dd7e56bac.jpg"
+    },
+    "name": "Campanellino",
+    "elements": {
+      "MAIN_COST": "#2#",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "3",
+      "MAIN_EFFECT": "{R} [Sabota]."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-01-R-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_OR_09_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/9140b10707702868119e",
+        "reference": "BUREAUCRAT",
+        "id": "01HKAGVBV23NSWD6EXJXSKK3F8",
+        "name": "Burocrate"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/6eab02551fb1a9897cb0",
+        "reference": "NOBLE",
+        "id": "01HKAGVEV163KJH0BWMZ6WR7E9",
+        "name": "Nobile"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/902c90ad79ce2dd1bcfb",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/6d1ecb77632fb4de93c2a947b829f6d8.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_OR_09_R2",
+    "reference": "ALT_MUSUBI_B_OR_09_R2",
+    "id": "01K4W8PE33TGKXZF0ZJHGZHKHS",
+    "mainFaction": {
+      "@id": "/factions/AX",
+      "@type": "Faction",
+      "reference": "AX",
+      "color": "#8c432a",
+      "id": "01GE7AC9XBG707G19F03A95TH1",
+      "name": "Axiom"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/fr_FR/f8b8a7f7759858464e16c9533a8f5743.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/en_US/d3a31b38b50bfa9e7589a69c3409693a.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/de_DE/64c9e38102b551c535829006b274ce0a.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/6d1ecb77632fb4de93c2a947b829f6d8.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/es_ES/165e437d53568b7207b2e67432f1656f.jpg"
+    },
+    "name": "Principe Ranocchio",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "2",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "3",
+      "MOUNTAIN_POWER": "0",
+      "ECHO_EFFECT": "#{D}: Il prossimo permanente che giochi in questo turno costa {1} in meno.#"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-05-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_BR_04_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/a8a06b0f09af9ba2e457",
+        "reference": "MESSENGER",
+        "id": "01HKAGPRRNK7X4TZEBYSPK6DDC",
+        "name": "Messaggero"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/ceb88098e0ea6c186821",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/e1e539b2515d6db6575611ebdebea2a6.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_BR_04_C",
+    "reference": "ALT_MUSUBI_B_BR_04_C",
+    "id": "01K4W8PE2Z39T8P4TX6TR6PEX0",
+    "mainFaction": {
+      "@id": "/factions/BR",
+      "@type": "Faction",
+      "reference": "BR",
+      "color": "#c32637",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T4",
+      "name": "Bravos"
+    },
+    "allImagePath": {
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/de_DE/cea0eefafe4f1f8b135ea1ef2fd073f8.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/e1e539b2515d6db6575611ebdebea2a6.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/es_ES/3c31dc78452caa4c7f6a7b7d67cdcf78.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/fr_FR/99096c40c4b340c55a438794a3fba5c8.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/en_US/b10e60905e1c17ead2143c6213bf68aa.jpg"
+    },
+    "name": "Ratatoskr",
+    "elements": {
+      "MAIN_COST": "1",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "1",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1",
+      "MAIN_EFFECT": "{R} Ottengo 2 rinforzi."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-02-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_BR_04_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/2c82cb03035e2a9aa574",
+        "reference": "MESSENGER",
+        "id": "01HKAGPRRNK7X4TZEBYSPK6DDC",
+        "name": "Messaggero"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/fa1995bebc625bc3071c",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/06bee1de8a88ee0c3b4c9d506f7a7a15.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_BR_04_R1",
+    "reference": "ALT_MUSUBI_B_BR_04_R1",
+    "id": "01K4W8PE2Z39T8P4TX6TR6PEX3",
+    "mainFaction": {
+      "@id": "/factions/BR",
+      "@type": "Faction",
+      "reference": "BR",
+      "color": "#c32637",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T4",
+      "name": "Bravos"
+    },
+    "allImagePath": {
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/en_US/e2424b3d30b77c39f64ecacc0ced8deb.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/fr_FR/82dd71e481a28d7682455af970fbe53f.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/de_DE/15e1d2f43a22438e454b79dba1f5c978.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/06bee1de8a88ee0c3b4c9d506f7a7a15.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/es_ES/b4abef9b07ca36eaf505a5d68e87ebf2.jpg"
+    },
+    "name": "Ratatoskr",
+    "elements": {
+      "MAIN_COST": "1",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "1",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1",
+      "MAIN_EFFECT": "{R} Ottengo #3 rinforzi#."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-02-R-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_LY_06_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/74a27f6ae82168cb5e60",
+        "reference": "CITIZEN",
+        "id": "01HKAGQWDFDGS8YVZGW98BVV9D",
+        "name": "Cittadino"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/6cea72c1f17a94be1445",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/2f5a7805e58dcaedd7d93b90b540df57.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_LY_06_R2",
+    "reference": "ALT_MUSUBI_B_LY_06_R2",
+    "id": "01K4W8PE30C0PTG8MB1Z52M1CS",
+    "mainFaction": {
+      "@id": "/factions/BR",
+      "@type": "Faction",
+      "reference": "BR",
+      "color": "#c32637",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T4",
+      "name": "Bravos"
+    },
+    "allImagePath": {
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/de_DE/f902b9d3984d3b123b3bdcd3d5d2078a.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/es_ES/b9c09915175031d5c63a5b312d4765ed.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/2f5a7805e58dcaedd7d93b90b540df57.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/en_US/61aa7b255c7b68f04821352d7ba25c2b.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/fr_FR/0fea7ea601cd270d398cac4e2c29969b.jpg"
+    },
+    "name": "Mistificatrice dell'Uroboro",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "1",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "{J} Tira un dado. Con 4+, ottengo 2 rinforzi. Con 1-3, ottengo 1 rinforzo."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-03-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_YZ_09_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/14b5b5c251b728be0032",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/2592d848e5f09c759113",
+        "reference": "SPIRIT",
+        "id": "01HKAGQ2CRATX32S1PS2GBXYV7",
+        "name": "Spirito"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/30fb812ab1babfe16f4d",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/cd7eebc19317501f666f4fd0dce5de8e.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_YZ_09_R2",
+    "reference": "ALT_MUSUBI_B_YZ_09_R2",
+    "id": "01K4W8PE341XSKT2MZP4E8RJPE",
+    "mainFaction": {
+      "@id": "/factions/BR",
+      "@type": "Faction",
+      "reference": "BR",
+      "color": "#c32637",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T4",
+      "name": "Bravos"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/fr_FR/0a0c31e5e02174737506e2ca8e2fc6cc.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/de_DE/154089c72ddaff468d5f90c4dc81bad7.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/en_US/b20d1bc45a19ba879741a028f9d2c859.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/cd7eebc19317501f666f4fd0dce5de8e.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/es_ES/c1f4f717a202296da0f63bffd214303d.jpg"
+    },
+    "name": "Dama del Lago",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "2",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1",
+      "ECHO_EFFECT": "#{D}: Il prossimo personaggio che giochi in questo turno perde [[Fugace]].#"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-06-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_AX_09_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/9c372d4b553fe48a4d41",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/752c802a0fda484368cb",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/cac678f5777e811149c5a856a6e8f7f6.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_AX_09_R2",
+    "reference": "ALT_MUSUBI_B_AX_09_R2",
+    "id": "01K4W8PE2XV30V3RDBMGS6PJEN",
+    "mainFaction": {
+      "@id": "/factions/LY",
+      "@type": "Faction",
+      "reference": "LY",
+      "color": "#cf4171",
+      "id": "01GE7AC9XGB6JE2V63WXWN4FB3",
+      "name": "Lyra"
+    },
+    "allImagePath": {
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/de_DE/4b19f5b9bb6a3a6924728290eaf85203.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/it_IT/cac678f5777e811149c5a856a6e8f7f6.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/es_ES/ef5c8bbbe8a91cf4487753cefbcf70f4.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/fr_FR/b8eeb4ff470e8ce8e68735783550b050.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_AX_09/JPG/en_US/b6bd73455cc0efec5658c556edd98724.jpg"
+    },
+    "name": "Campanellino",
+    "elements": {
+      "MAIN_COST": "#2#",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "3",
+      "MAIN_EFFECT": "{R} [Sabota]."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-01-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_LY_06_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/a1a8457e8097565e80a5",
+        "reference": "CITIZEN",
+        "id": "01HKAGQWDFDGS8YVZGW98BVV9D",
+        "name": "Cittadino"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/2af4ebac971c074a9343",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/30f6fc03c633b9e7891467805e081806.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_LY_06_C",
+    "reference": "ALT_MUSUBI_B_LY_06_C",
+    "id": "01K4W8PE30C0PTG8MB1Z52M1CK",
+    "mainFaction": {
+      "@id": "/factions/LY",
+      "@type": "Faction",
+      "reference": "LY",
+      "color": "#cf4171",
+      "id": "01GE7AC9XGB6JE2V63WXWN4FB3",
+      "name": "Lyra"
+    },
+    "allImagePath": {
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/de_DE/039a9a534f6eae2e138008868170eefa.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/30f6fc03c633b9e7891467805e081806.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/es_ES/80744c32fb00bd9beb5744166a31d977.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/en_US/aa46a741b2a820992b94fb81f1e2daef.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/fr_FR/e3ea38bc049bf261f4cc9ecbf9d19e9e.jpg"
+    },
+    "name": "Mistificatrice dell'Uroboro",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "1",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "{J} Tira un dado. Con 4+, ottengo 2 rinforzi. Con 1-3, ottengo 1 rinforzo."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-03-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_LY_06_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/29155d1703628276b025",
+        "reference": "CITIZEN",
+        "id": "01HKAGQWDFDGS8YVZGW98BVV9D",
+        "name": "Cittadino"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/f2a905bf0caa74590ee4",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/faf5cfa782b1c389ca4d488b25b4fab5.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_LY_06_R1",
+    "reference": "ALT_MUSUBI_B_LY_06_R1",
+    "id": "01K4W8PE30C0PTG8MB1Z52M1CP",
+    "mainFaction": {
+      "@id": "/factions/LY",
+      "@type": "Faction",
+      "reference": "LY",
+      "color": "#cf4171",
+      "id": "01GE7AC9XGB6JE2V63WXWN4FB3",
+      "name": "Lyra"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/fr_FR/3ae2b9988f803ab7efba31d1e58f9974.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/de_DE/074cabb5e1a96a51afe91c17c1e24f8c.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/it_IT/faf5cfa782b1c389ca4d488b25b4fab5.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/en_US/f52c67a4ae599630d54a43d5f69bbb97.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_LY_06/JPG/es_ES/ae6fc9884c63e3d404b24ad34578b1bf.jpg"
+    },
+    "name": "Mistificatrice dell'Uroboro",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "#2#",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "{J} Tira un dado. Con 4+, ottengo #3 rinforzi#. Con 1-3, ottengo 1 rinforzo."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-03-R-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_MU_22_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/7d4025fc1f43ce7960ba",
+        "reference": "DRAGON",
+        "id": "01HKAGQCSK17FMGRQDPCFZZ4GB",
+        "name": "Drago"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/687bee24d8b889231b64",
+        "reference": "PLANT",
+        "id": "01HKAGSB49H24XWW17AAY441MT",
+        "name": "Pianta"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/8b13e442667f2bfb5e25",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/a65f3f20e9347a76b32635f06e20da0e.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_MU_22_R2",
+    "reference": "ALT_MUSUBI_B_MU_22_R2",
+    "id": "01K4W8PE32W06C5FDX27J50M6D",
+    "mainFaction": {
+      "@id": "/factions/LY",
+      "@type": "Faction",
+      "reference": "LY",
+      "color": "#cf4171",
+      "id": "01GE7AC9XGB6JE2V63WXWN4FB3",
+      "name": "Lyra"
+    },
+    "allImagePath": {
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/es_ES/f2ae8cb1b241095f8ad5f522bd8360fd.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/en_US/f90a8265c2d58866edfbbd1207f3e97b.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/fr_FR/0d61593013cb40027ea43634fcaa3da3.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/de_DE/2b34b1c53cba8a8d6113f3f41e49d035.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/a65f3f20e9347a76b32635f06e20da0e.jpg"
+    },
+    "name": "Idracaena",
+    "elements": {
+      "MAIN_COST": "7",
+      "RECALL_COST": "7",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "[Eterno].  {J} Ottengo 4 rinforzi.  A mezzogiorno — Ottengo 4 rinforzi."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-04-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_MU_22_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/7d3b6b1cfa7d38d3822d",
+        "reference": "DRAGON",
+        "id": "01HKAGQCSK17FMGRQDPCFZZ4GB",
+        "name": "Drago"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/8c3976eeb4622e021ce9",
+        "reference": "PLANT",
+        "id": "01HKAGSB49H24XWW17AAY441MT",
+        "name": "Pianta"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/aefda7b6d75188047f68",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/9d7843c46689556de810f30bdb1bcd11.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_MU_22_C",
+    "reference": "ALT_MUSUBI_B_MU_22_C",
+    "id": "01K4W8PE32W06C5FDX27J50M67",
+    "mainFaction": {
+      "@id": "/factions/MU",
+      "@type": "Faction",
+      "reference": "MU",
+      "color": "#3d6b42",
+      "id": "01GE7AC9X2BNM40TTAYAEFSZSJ",
+      "name": "Muna"
+    },
+    "allImagePath": {
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/es_ES/4850a7ab8ca7ea829fd2412199d4a289.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/fr_FR/87383181d26d69b7690be7e9bfe263fa.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/de_DE/4151a63d414cc2fd5c172768a2395ce6.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/en_US/7ff48f44bd72ef5d86e2b937929acf28.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/9d7843c46689556de810f30bdb1bcd11.jpg"
+    },
+    "name": "Idracaena",
+    "elements": {
+      "MAIN_COST": "7",
+      "RECALL_COST": "7",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "[Eterno].  {J} Ottengo 4 rinforzi.  A mezzogiorno — Ottengo 4 rinforzi."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-04-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_MU_22_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/2a3b7bedb328db387e5f",
+        "reference": "DRAGON",
+        "id": "01HKAGQCSK17FMGRQDPCFZZ4GB",
+        "name": "Drago"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/2481bc1d7f47a86313aa",
+        "reference": "PLANT",
+        "id": "01HKAGSB49H24XWW17AAY441MT",
+        "name": "Pianta"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/e4ef79040fbebf66c753",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/008f0cbc5c84bd22dfa755e59d30f881.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_MU_22_R1",
+    "reference": "ALT_MUSUBI_B_MU_22_R1",
+    "id": "01K4W8PE32W06C5FDX27J50M6A",
+    "mainFaction": {
+      "@id": "/factions/MU",
+      "@type": "Faction",
+      "reference": "MU",
+      "color": "#3d6b42",
+      "id": "01GE7AC9X2BNM40TTAYAEFSZSJ",
+      "name": "Muna"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/fr_FR/e29695e66009777161664fb1daf2a16c.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/de_DE/224edb2515b885d2b1f3912b5d4d85ea.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/it_IT/008f0cbc5c84bd22dfa755e59d30f881.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/en_US/679c1b19bf601f6202778ba0b067ce2d.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_MU_22/JPG/es_ES/918a9565a30d20af17169b083c0ec212.jpg"
+    },
+    "name": "Idracaena",
+    "elements": {
+      "MAIN_COST": "7",
+      "RECALL_COST": "7",
+      "OCEAN_POWER": "0",
+      "FOREST_POWER": "0",
+      "MOUNTAIN_POWER": "0",
+      "MAIN_EFFECT": "[Eterno].  #[Tenace X], dove X è il numero di Piante che controlli.#  {J} Ottengo 4 rinforzi.  A mezzogiorno — Ottengo 4 rinforzi."
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-04-R-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_BR_04_R2",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/fc7c3b610c8539068c5e",
+        "reference": "MESSENGER",
+        "id": "01HKAGPRRNK7X4TZEBYSPK6DDC",
+        "name": "Messaggero"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/0cd981b84a77c199ba34",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/854b961220d994197700d334dd756569.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_BR_04_R2",
+    "reference": "ALT_MUSUBI_B_BR_04_R2",
+    "id": "01K4W8PE2Z39T8P4TX6TR6PEX6",
+    "mainFaction": {
+      "@id": "/factions/OR",
+      "@type": "Faction",
+      "reference": "OR",
+      "color": "#0f6593",
+      "id": "01GE7AC9X78DXSNKNB15KCF69X",
+      "name": "Ordis"
+    },
+    "allImagePath": {
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/it_IT/854b961220d994197700d334dd756569.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/es_ES/aa323f4c8106f2c484b15a9d85c50818.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/fr_FR/4f1006524aaefece4897a6add89a27c8.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/en_US/af07178e3e0503442d5298f9a8e1954c.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_BR_04/JPG/de_DE/6e1f61431299712504e1a34a89658f98.jpg"
+    },
+    "name": "Ratatoskr",
+    "elements": {
+      "MAIN_COST": "1",
+      "RECALL_COST": "3",
+      "OCEAN_POWER": "1",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1",
+      "MAIN_EFFECT": "{R} #Crea due pedine Soldato [Recluta Ordis 1/1/1] nella mia spedizione.#"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-02-F-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_OR_09_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/472b6e9364fda7306406",
+        "reference": "BUREAUCRAT",
+        "id": "01HKAGVBV23NSWD6EXJXSKK3F8",
+        "name": "Burocrate"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/6b887e3ea54e6cc59796",
+        "reference": "NOBLE",
+        "id": "01HKAGVEV163KJH0BWMZ6WR7E9",
+        "name": "Nobile"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/293a25cf771e0b26bfb3",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/b536e5511cbe9efcd0244ebea682e4ea.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_OR_09_C",
+    "reference": "ALT_MUSUBI_B_OR_09_C",
+    "id": "01K4W8PE33TGKXZF0ZJHGZHKHK",
+    "mainFaction": {
+      "@id": "/factions/OR",
+      "@type": "Faction",
+      "reference": "OR",
+      "color": "#0f6593",
+      "id": "01GE7AC9X78DXSNKNB15KCF69X",
+      "name": "Ordis"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/fr_FR/0d4473def443157414e693fdec682448.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/b536e5511cbe9efcd0244ebea682e4ea.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/de_DE/50ed00056a0bc0555847bda0fa4d190e.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/en_US/23caf41ccede408b0b6a817050053d5d.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/es_ES/5fb6893a55d6346d630fa794bb78595c.jpg"
+    },
+    "name": "Principe Ranocchio",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "2",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "3",
+      "MOUNTAIN_POWER": "0"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-05-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_OR_09_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/13431296a0188016b7cb",
+        "reference": "BUREAUCRAT",
+        "id": "01HKAGVBV23NSWD6EXJXSKK3F8",
+        "name": "Burocrate"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/c8d507592833e048aa3b",
+        "reference": "NOBLE",
+        "id": "01HKAGVEV163KJH0BWMZ6WR7E9",
+        "name": "Nobile"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/235d5d7bc38f11fbda34",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/8a5ae4b10b6dcff0e08820024d372591.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_OR_09_R1",
+    "reference": "ALT_MUSUBI_B_OR_09_R1",
+    "id": "01K4W8PE33TGKXZF0ZJHGZHKHP",
+    "mainFaction": {
+      "@id": "/factions/OR",
+      "@type": "Faction",
+      "reference": "OR",
+      "color": "#0f6593",
+      "id": "01GE7AC9X78DXSNKNB15KCF69X",
+      "name": "Ordis"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/fr_FR/1537df4093ed6ce11f388209207ca698.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/de_DE/88be2e443e5c6bd7d30f06dec05066d4.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/it_IT/8a5ae4b10b6dcff0e08820024d372591.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/en_US/731c3c25a86a8362da7d96656c2fa6d1.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_OR_09/JPG/es_ES/aa57d6fc4c49445968b0df876b78fb41.jpg"
+    },
+    "name": "Principe Ranocchio",
+    "elements": {
+      "MAIN_COST": "#1#",
+      "RECALL_COST": "#1#",
+      "OCEAN_POWER": "#2#",
+      "FOREST_POWER": "#2#",
+      "MOUNTAIN_POWER": "0"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-05-R-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_YZ_09_C",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/09f9f1a61e3fda2e4e6a",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/8c96058fe09e0e9e7104",
+        "reference": "SPIRIT",
+        "id": "01HKAGQ2CRATX32S1PS2GBXYV7",
+        "name": "Spirito"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/6d6fece0de1d774fadc6",
+      "reference": "COMMON",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY745A",
+      "name": "Common"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/dbd8e34641e534d218ea3b8a29afc714.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_YZ_09_C",
+    "reference": "ALT_MUSUBI_B_YZ_09_C",
+    "id": "01K4W8PE341XSKT2MZP4E8RJP8",
+    "mainFaction": {
+      "@id": "/factions/YZ",
+      "@type": "Faction",
+      "reference": "YZ",
+      "color": "#764891",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY7459",
+      "name": "Yzmir"
+    },
+    "allImagePath": {
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/dbd8e34641e534d218ea3b8a29afc714.jpg",
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/fr_FR/0cf7ecc0365bc711d9b5c00270d6d121.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/de_DE/5c77a2ef969af7f1de3bbab2921b9851.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/en_US/093214809c6fdf12a34cb7520b465c0e.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/es_ES/4ccfa07f0bac0c841db74ecebb65b87e.jpg"
+    },
+    "name": "Dama del Lago",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "2",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-06-C-IT"
+  },
+  {
+    "@context": "/contexts/Card",
+    "@id": "/cards/ALT_MUSUBI_B_YZ_09_R1",
+    "@type": "Card",
+    "cardType": {
+      "@id": "/card_types/01H19NWA92A4ERAC4ATMSZNASS",
+      "@type": "CardType",
+      "reference": "CHARACTER",
+      "id": "01H19NWA92A4ERAC4ATMSZNASS",
+      "name": "Personaggio"
+    },
+    "cardSubTypes": [
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/b5d8b6dbea8a9cbb69ce",
+        "reference": "FAIRY",
+        "id": "01HKAGPBKC6V2RK28EZGHP8VWW",
+        "name": "Folletto"
+      },
+      {
+        "@type": "CardSubType",
+        "@id": "/.well-known/genid/224ff2d118c9b14784f9",
+        "reference": "SPIRIT",
+        "id": "01HKAGQ2CRATX32S1PS2GBXYV7",
+        "name": "Spirito"
+      }
+    ],
+    "cardSet": {
+      "@id": "/card_sets/MUSUBI",
+      "@type": "CardSet",
+      "id": "01K4W8PCZ8QND7585GEK66EFJ9",
+      "reference": "MUSUBI",
+      "name": "Musubi"
+    },
+    "rarity": {
+      "@type": "Rarity",
+      "@id": "/.well-known/genid/2b4d32403f15647af353",
+      "reference": "RARE",
+      "id": "01GE7AC9WY6PK56RADXXD6P1T5",
+      "name": "Rare"
+    },
+    "cardRulings": [],
+    "imagePath": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/70dea48102c90f60b74d339027623177.jpg",
+    "assets": [],
+    "lowerPrice": 0,
+    "qrUrlDetail": "https://qr.altered.gg/ALT_MUSUBI_B_YZ_09_R1",
+    "reference": "ALT_MUSUBI_B_YZ_09_R1",
+    "id": "01K4W8PE341XSKT2MZP4E8RJPB",
+    "mainFaction": {
+      "@id": "/factions/YZ",
+      "@type": "Faction",
+      "reference": "YZ",
+      "color": "#764891",
+      "id": "01GE7AC9WEQKW1Y1BF8SCY7459",
+      "name": "Yzmir"
+    },
+    "allImagePath": {
+      "fr-fr": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/fr_FR/798f22d333f169749ac0102095dfef96.jpg",
+      "de-de": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/de_DE/e3b5e3df66cb7e2bfd67c560033a1727.jpg",
+      "en-us": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/en_US/bd6d65e88108db66ec33dfae51ff8f1d.jpg",
+      "it-it": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/it_IT/70dea48102c90f60b74d339027623177.jpg",
+      "es-es": "https://altered-prod-eu.s3.amazonaws.com/Art/MUSUBI/CARDS/ALT_MUSUBI_B_YZ_09/JPG/es_ES/aa02069ea18f67e6d9e8d9e3d50c4238.jpg"
+    },
+    "name": "Dama del Lago",
+    "elements": {
+      "MAIN_COST": "2",
+      "RECALL_COST": "2",
+      "OCEAN_POWER": "3",
+      "FOREST_POWER": "1",
+      "MOUNTAIN_POWER": "1",
+      "ECHO_EFFECT": "#{D}: Il prossimo incantesimo che giochi in questo turno perde [[Fugace]].#"
+    },
+    "isSuspended": false,
+    "isErrated": false,
+    "isBanned": false,
+    "collectorNumber": "MUSUBI-06-R-IT"
+  }
+]
