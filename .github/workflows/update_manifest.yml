@@ -25,9 +25,8 @@ jobs:
       #  Manifest-Update-Skript ausführen
       # ACHTUNG: working-directory muss auf den Repo-Ordner zeigen!
       - name: Update manifest
-        run: python UTILS/update_manifest.py
-        working-directory: .
-
+        run: python Altered_Knowledge_Source/UTILS/update_manifest.py
+        
       #  Änderungen committen & pushen (wenn nötig)
       - name: Commit and push changes
         run: |
