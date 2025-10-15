@@ -12,18 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      #  Repository auschecken
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      #  Python installieren
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      #  Manifest-Update-Skript ausführen
+      # ACHTUNG: working-directory muss auf den Repo-Ordner zeigen!
       - name: Update manifest
         run: python UTILS/update_manifest.py
-	working-directory: Altered_Knowledge_Source
+        working-directory: Altered_Knowledge_Source
 
+      #  Änderungen committen & pushen (wenn nötig)
       - name: Commit and push changes
         run: |
           git config --global user.name "Manifest Bot"
