@@ -1,0 +1,14 @@
+{
+  "sets": [
+    "SETS/CORE/CORE_DE.json",
+    "SETS/CORE/CORE_EN.json",
+    "SETS/ALIZE/ALIZE_DE.json",
+    "SETS/ALIZE/ALIZE_EN.json",
+    "SETS/BISE/BISE_DE.json",
+    "SETS/BISE/BISE_EN.json"
+  ],
+  "uniques": "UNIQUES/cards/",
+  "collections": "COLLECTION/",
+  "rules": "RULES/",
+  "history": "HISTORY/"
+}
