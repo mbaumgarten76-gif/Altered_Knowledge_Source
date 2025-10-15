@@ -1,0 +1,57 @@
+ {
+  "@context": "/contexts/Card",
+  "@id": "/uniques/ALT_UNIQUE_TBF_021_U_2889",
+  "@type": "UniqueCard",
+  "id": "ALT_UNIQUE_TBF_021_U_2889",
+  "name": "Haven Seiringar",
+  "cardType": {
+    "@type": "CardType",
+    "reference": "CHARACTER",
+    "name": "Character"
+  },
+  "cardSubTypes": [
+    {
+      "@type": "CardSubType",
+      "reference": "ADVENTURER",
+      "name": "Adventurer"
+    }
+  ],
+  "cardSet": {
+    "@id": "/card_sets/ALIZE",
+    "@type": "CardSet",
+    "reference": "ALIZE",
+    "name": "Trial by Frost"
+  },
+  "mainFaction": {
+    "@id": "/factions/BR",
+    "@type": "Faction",
+    "reference": "BR",
+    "name": "Bravos",
+    "color": "#3b6bb1"
+  },
+  "rarity": {
+    "@type": "Rarity",
+    "reference": "UNIQUE",
+    "name": "Unique"
+  },
+  "collectorNumber": "TBF-021-U-2889",
+  "elements": {
+    "MAIN_COST": "3",
+    "RECALL_COST": "4",
+    "MOUNTAIN_POWER": "4",
+    "OCEAN_POWER": "4",
+    "FOREST_POWER": "2",
+    "MAIN_EFFECT": "When played from the Reserve: If you control one or more Landmarks, each Character in target Expedition gains 1 boost. When I leave the Expedition zone, if I was Fleeting – Sabotage."
+  },
+  "imagePath": "https://www.altered.gg/image-transform/?width=640&format=auto&image=https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_BR_34/UNIQUE/JPG/en_US/31a0fb2a3d6d3037841f95336af60d5d.jpg",
+  "qrUrlDetail": "https://qr.altered.gg/ALT_UNIQUE_TBF_021_U_2889",
+  "isSuspended": false,
+  "isErrated": false,
+  "isBanned": false,
+  "loreEntries": [],
+  "sources": [
+    {
+      "note": "Karte manuell angelegt"
+    }
+  ]
+}
