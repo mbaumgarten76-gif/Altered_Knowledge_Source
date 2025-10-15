@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-10-15",
+  "description": "Index aller Unique-Karten für Altered TCG – manuell gepflegte Version.",
+  "uniques": [
+    {
+      "id": "ALT_UNIQUE_TBF_021_U_2889",
+      "name_de": null,
+      "name_en": "Haven Seiringar",
+      "faction": "BR",
+      "set": "ALIZE",
+      "rarity": "U",
+      "language": ["EN"],
+      "card_code": "TBF-021-U-2889",
+      "cost": 3,
+      "type": "Unique",
+      "keywords": ["Fleeting", "Sabotage", "Boost", "Landmark"],
+      "tags": ["Character", "Adventurer"],
+      "summary_de": "Wenn du Landmarks kontrollierst, erhalten Expeditionen einen Boost. Verlässt die Expedition mit Fleeting, löst Sabotage aus.",
+      "summary_en": "When you control Landmarks, target Expedition Characters gain a boost. Leaves Expedition with Fleeting – Sabotage.",
+      "detail_path": "UNIQUES/cards/ALT_UNIQUE_TBF_021_U_2889.json",
+      "sources": [
+        {
+          "note": "Karte manuell angelegt"
+        }
+      ]
+    }
+  ]
+}
