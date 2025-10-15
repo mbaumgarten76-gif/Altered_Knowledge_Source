@@ -33559,11 +33559,16 @@
       "path": "SETS/WCS25/WCS25_EN.json"
     }
   ],
-  "uniques": {
-    "files": [
-      "UNIQUES/cards/ALT_UNIQUE_TBF_021_U_2889.json"
-    ]
-  },
+  "uniques": [
+    {
+      "name": "Haven Seiringar",
+      "reference": "ALT_UNIQUE_TBF_021_U_2889",
+      "collectorNumber": "TBF-021-U-2889",
+      "set": "ALIZE",
+      "language": "EN",
+      "path": "UNIQUES/cards/ALT_UNIQUE_TBF_021_U_2889.json"
+    }
+  ],
   "collections": {
     "files": [
       "COLLECTION/collection_ALIZE.json",
