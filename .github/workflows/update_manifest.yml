@@ -22,6 +22,7 @@ jobs:
 
       - name: Update manifest
         run: python UTILS/update_manifest.py
+	working-directory: Altered_Knowledge_Source
 
       - name: Commit and push changes
         run: |
