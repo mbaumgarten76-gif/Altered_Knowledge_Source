@@ -26,7 +26,7 @@ jobs:
       # ACHTUNG: working-directory muss auf den Repo-Ordner zeigen!
       - name: Update manifest
         run: python UTILS/update_manifest.py
-        working-directory: Altered_Knowledge_Source
+        working-directory: .
 
       #  Änderungen committen & pushen (wenn nötig)
       - name: Commit and push changes
