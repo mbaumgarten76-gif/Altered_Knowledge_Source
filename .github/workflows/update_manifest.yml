@@ -21,7 +21,7 @@ jobs:
           python-version: "3.10"
 
       - name: Update manifest
-        run: python UTILS/update_manifest.py
+        run: python UTILS/update_manifest_from_sets.py
 
       - name: Commit and push changes
         run: |
