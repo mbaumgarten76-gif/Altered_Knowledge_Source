@@ -86,7 +86,8 @@
       "UTILS/import_from_api.py",
       "UTILS/merge_collections.py",
       "UTILS/validate_deck_rules.py",
-      "UTILS/export_summary_json.py"
+      "UTILS/export_summary_json.py",
+      "UTILS/load_card_by_name.py"
     ],
     "optional": true
   },
