@@ -1,0 +1,32 @@
+name: Update Manifest Automatically
+
+on:
+  push:
+    paths:
+      - "CARDS/**"
+      - "UNIQUES/**"
+  workflow_dispatch:
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Update manifest
+        run: python UTILS/update_manifest.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Manifest Bot"
+          git config --global user.email "bot@altered.local"
+          git add manifest.json
+          git diff-index --quiet HEAD || git commit -m "Auto-update manifest via GitHub Action"
+          git push
