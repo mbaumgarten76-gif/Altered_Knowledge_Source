@@ -11,7 +11,8 @@
 
     "patterns": [
       "CARDS/DE/*/*/*.json",
-      "CARDS/EN/*/*/*.json"
+      "CARDS/EN/*/*/*.json",
+      "UNIQUES/cards/*.json"
     ],
 
     "notes": "Jede Karte liegt als eigene JSON unter CARDS/{LANG}/{SET}/{FACTION}/<CARD_ID>.json"
