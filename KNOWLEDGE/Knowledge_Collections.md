@@ -60,3 +60,21 @@ Beim Abruf von Sammlungsdaten (z. B. „Zeige mir alle Axiom-Karten“):
 
 Diese Methode gewährleistet, dass Karten aus **allen Sets** berücksichtigt werden,
 nicht nur aus einem einzelnen Collection-File.
+
+## 🧩 Integration von Unique-Karten in die Besitzprüfung
+
+Zusätzlich zu den regulären Karten wird auch der Ordner `/UNIQUES/cards/` berücksichtigt.
+
+1. Prüfe, ob im Repository eine Datei `/UNIQUES/cards/*.json` existiert.
+2. Falls vorhanden, lade die JSON-Datei.
+3. Jede Unique gilt als **besessen**, sofern im Feld `"owner": "<Name>"` oder `"collection": true` hinterlegt ist.
+4. Zeige sie in Besitzabfragen und Deckbauvorschlägen unter eigener Kategorie „Unique“ an.
+
+## ✨ Foil-Karten
+
+Beim Zusammenführen mehrerer Collection-Dateien:
+1. Karten mit Kennzeichen `"foil": true` oder `"Rarität": "Foil"` behalten ihr Basisset, aber erhalten das Zusatzfeld `"Foil": true`.
+2. Für die Zählung werden Foils mit der Basisrarität zusammengeführt.
+3. Ausgabe: In Tabellen oder Decklisten kann ein kleines „★“ angezeigt werden, um Foilkarten zu markieren.
+
+
