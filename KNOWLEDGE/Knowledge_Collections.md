@@ -14,6 +14,32 @@ Beim Erstellen oder Analysieren von Decks:
   „Diese Karte befindet sich nicht in deiner Sammlung.“
 - Collection-Daten beeinflussen keine Regeln oder Effekte.
 
+## 🌐 GitHub-basierte Collection-Verarbeitung
+
+Wenn sich die Sammlung des Spielers im GitHub-Repository befindet (Ordner `/COLLECTION/`):
+
+1. Lade die Liste aller Dateien aus dem Manifest (`manifest.json`).
+2. Filtere alle Pfade, die unter `/COLLECTION/` liegen.
+3. Lade **jede dieser Dateien** mit:
+   `raw_githubusercontent_com__jit_plugin.get_file({"filepath": "<Pfad>"})`.
+4. Kombiniere alle Karteneinträge zu einer globalen Sammlung.
+5. Ignoriere Karten mit `count = 0` oder fehlenden IDs.
+6. Wenn eine Fraktion angegeben ist (z. B. „Axiom“ → `AX`), filtere danach.
+7. Gib das Ergebnis als strukturierte Tabelle aus:
+   | Name | Rarität | Anzahl | Set |
+8. Falls keine Fraktion angegeben ist, zeige alle Karten der Sammlung.
+
+Beispiel:
+| Name | Rarität | Anzahl | Set |
+|------|----------|--------|------|
+| Daring Porter | Common | 3 | ALIZE |
+| Thoughtful Navigator | Rare | 1 | CORE |
+| Arcane Mechanist | Unique | 1 | ALIZE |
+
+💡 Diese Methode kombiniert Sammlungen über alle Sets hinweg,
+ohne dass Dateien manuell hochgeladen werden müssen.
+
+
 ## 🔄 Erweiterte Collection-Verarbeitung
 
 Beim Abruf von Sammlungsdaten (z. B. „Zeige mir alle Axiom-Karten“):
