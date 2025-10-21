@@ -1,0 +1,144 @@
+name: Build Manifest (no local Python needed)
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main, master ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scan repo and generate manifest & indexes
+        run: |
+          python - <<'PY'
+          import json, re, os, hashlib
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          REPO = Path('.').resolve()
+          TOP = ["CARDS","COLLECTION","RULES","SETS","DECKS","HISTORY"]
+          OUTDIR = REPO / "indexes"
+          OUTDIR.mkdir(parents=True, exist_ok=True)
+
+          LANG = re.compile(r"/(EN|DE|FR|ES|IT|PT|PL|RU|JA|ZH)/", re.I)
+          FACTION = re.compile(r"/(AXIOM|AX|BRAVOS|BR|LYRA|LY|OR|YZMIR|YZ|ALIZE|AZ|KAIJU|KJ)/", re.I)
+          SETCODE = re.compile(r"/(CORE|COREKS|ALIZE|CYCLONE|BREEZE|TEMPEST|STORM|AXIOM|BRAVOS|LYRA|OR|YZMIR)/", re.I)
+          RARITY = re.compile(r"/(COMMON|C|RARE|R|EPIC|E|LEGENDARY|L|MYTHIC|M)/", re.I)
+
+          def sha256(p: Path):
+            h = hashlib.sha256()
+            with p.open('rb') as f:
+              for chunk in iter(lambda: f.read(8192), b''):
+                h.update(chunk)
+            return h.hexdigest()
+
+          def meta_from_path(path: str):
+            m = {}
+            if (g:=LANG.search(path)): m["lang"] = g.group(1).upper()
+            if (g:=FACTION.search(path)): m["faction"] = g.group(1).upper()
+            if (g:=SETCODE.search(path)): m["set"] = g.group(1).upper()
+            if (g:=RARITY.search(path)):
+              r = g.group(1).upper()
+              m["rarity"] = {"COMMON":"C","C":"C","RARE":"R","R":"R","EPIC":"E","E":"E","LEGENDARY":"L","L":"L","MYTHIC":"M","M":"M"}.get(r,r)
+            return m
+
+          def kind(top):
+            return {
+              "CARDS":"card","COLLECTION":"collection","RULES":"rule",
+              "SETS":"set","DECKS":"deck","HISTORY":"history"
+            }.get(top,"other")
+
+          now = datetime.now(timezone.utc).isoformat()
+          manifest = {}
+          problems = {}
+
+          for top in TOP:
+            base = REPO / top
+            if not base.exists(): 
+              continue
+            for p in base.rglob("*"):
+              if p.is_dir(): 
+                continue
+              rel = p.relative_to(REPO).as_posix()
+              entry = {
+                "path": rel,
+                "size": p.stat().st_size,
+                "mtime": datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc).isoformat(),
+                "kind": kind(top),
+                "sha256": sha256(p),
+                "detected": meta_from_path("/"+rel+"/"),
+                "scanned_at": now
+              }
+              if p.suffix.lower() == ".json":
+                try:
+                  data = json.loads(p.read_text(encoding="utf-8"))
+                  entry["valid_json"] = True
+                  if isinstance(data, dict):
+                    for k in ("id","ref","reference_id","name","type","rarity","faction","set","lang"):
+                      if k in data:
+                        entry.setdefault("meta",{})[k] = data[k]
+                except Exception as e:
+                  problems.setdefault(rel,[]).append(f"JSON error: {type(e).__name__}: {e}")
+              manifest[rel] = entry
+
+          # Write manifest
+          (REPO/"manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          # Minimal indexes
+          def dump(obj, name):
+            (OUTDIR/name).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          cards = [v for v in manifest.values() if v.get("kind")=="card"]
+          sets  = [v for v in manifest.values() if v.get("kind")=="set"]
+          rules = [v for v in manifest.values() if v.get("kind")=="rule"]
+          decks = [v for v in manifest.values() if v.get("kind")=="deck"]
+          history=[v for v in manifest.values() if v.get("kind")=="history"]
+          collection=[v for v in manifest.values() if v.get("kind")=="collection"]
+
+          cards_index = {}
+          for e in cards:
+            d=e.get("detected",{})
+            sc=d.get("set","UNKNOWN")
+            cards_index.setdefault(sc,[]).append({
+              "path": e["path"],
+              "lang": d.get("lang"),
+              "faction": d.get("faction"),
+              "rarity": d.get("rarity") or (e.get("meta",{}) or {}).get("rarity"),
+              "name": (e.get("meta",{}) or {}).get("name"),
+              "id":   (e.get("meta",{}) or {}).get("id") or (e.get("meta",{}) or {}).get("ref") or (e.get("meta",{}) or {}).get("reference_id"),
+            })
+
+          dump(cards_index, "cards_index.json")
+          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in sets}, "sets_index.json")
+          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in rules}, "rules_index.json")
+          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in decks}, "decks_index.json")
+          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in history}, "history_index.json")
+          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}), "size":e["size"] } for e in collection}, "collection_index.json")
+
+          if problems:
+            (REPO/"scan_problems.json").write_text(json.dumps(problems, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"Found JSON issues in {len(problems)} files (see scan_problems.json).")
+          else:
+            print("No JSON issues found.")
+          PY
+
+      - name: Commit manifest & indexes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(manifest): build manifest.json & indexes via CI"
+          file_pattern: |
+            manifest.json
+            indexes/**
+            scan_problems.json
