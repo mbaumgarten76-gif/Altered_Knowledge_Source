@@ -7,13 +7,16 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (full history)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # wichtig für sauberes Rebase/PR
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -52,8 +55,8 @@ jobs:
             """
             Akzeptiert:
               - String: "Common"/"C", "Rare"/"R"
-              - Objekt: {"reference": "RARE", "name":"Rare", ...}
-            Gibt zurück: "C" oder "R" (oder None, wenn unbekannt/leer).
+              - Objekt: {"reference":"RARE","name":"Rare", ...}
+            Gibt zurück: "C" oder "R" (oder None).
             """
             if val is None:
               return None
@@ -61,11 +64,7 @@ jobs:
               ref = (val.get('reference') or val.get('REFERENCE') or val.get('name') or val.get('NAME') or '').upper()
             else:
               ref = str(val).upper()
-
-            mapping = {
-              "COMMON":"C", "C":"C",
-              "RARE":"R",   "R":"R",
-            }
+            mapping = { "COMMON":"C","C":"C", "RARE":"R","R":"R" }
             return mapping.get(ref, mapping.get(ref.strip(), None)) or None
 
           def faction_from_filename(filename: str):
@@ -96,27 +95,26 @@ jobs:
                 "scanned_at": now
               }
 
-              # --- Generische Pfaderkennung für Karten ---
+              # Generische Pfaderkennung (CARDS/<LANG>/<SET>/<FACTION>/...)
               parts = rel.split("/")
               if parts[0] == "CARDS" and len(parts) >= 4:
                 detected_lang = parts[1].upper()
                 detected_set  = parts[2].upper()
                 detected_fac  = parts[3].upper()
 
-                # Fraktion zusätzlich aus Dateiname (z. B. ..._LY_...)
                 inferred_fac = faction_from_filename(parts[-1])
                 if inferred_fac and inferred_fac != detected_fac:
                   problems.setdefault(rel, []).append(
                     f"FACTION_MISMATCH: folder={detected_fac} filename={inferred_fac}"
                   )
-                  # Policy: Dateinamen bevorzugen (alternativ: Ordner bevorzugen)
+                  # Dateiname wins (alternativ: Ordner bevorzugen)
                   detected_fac = inferred_fac
 
                 entry["detected"]["lang"] = detected_lang
                 entry["detected"]["set"] = detected_set
                 entry["detected"]["faction"] = detected_fac
 
-              # --- JSON lesen und Meta-Felder extrahieren ---
+              # JSON einlesen & Meta übernehmen
               if p.suffix.lower() == ".json":
                 try:
                   data = json.loads(p.read_text(encoding="utf-8"))
@@ -129,7 +127,7 @@ jobs:
                     if meta:
                       entry["meta"] = meta
 
-                    # detected.rarity falls leer aus meta übernehmen & normalisieren
+                    # detected.rarity aus meta normalisiert übernehmen (falls leer)
                     if not entry["detected"].get("rarity"):
                       det_r = normalize_rarity_val(meta.get("rarity"))
                       if det_r:
@@ -140,10 +138,10 @@ jobs:
 
               manifest[rel] = entry
 
-          # --- Manifest schreiben ---
+          # manifest.json schreiben
           (REPO/"manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-          # --- Indexe erzeugen ---
+          # Indexe schreiben
           def dump(obj, name):
             (OUTDIR/name).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -174,27 +172,41 @@ jobs:
           dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {})} for e in hist_list}, "history_index.json")
           dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {}), "size": e["size"]} for e in coll_list}, "collection_index.json")
 
-          # --- Kurzstatistiken ---
-          fac_counts = Counter(( (v.get("detected") or {}).get("faction") ) for v in cards)
-          rar_counts = Counter(( (v.get("detected") or {}).get("rarity") ) for v in cards)
+          # Kurzstatistik & Problems
+          fac_counts = Counter(((v.get("detected") or {}).get("faction")) for v in cards)
+          rar_counts = Counter(((v.get("detected") or {}).get("rarity")) for v in cards)
           print("Factions:", dict(fac_counts))
           print("Rarities:", dict(rar_counts))
 
-          # --- Probleme protokollieren (nicht fatal) ---
           if problems:
             (REPO/"scan_problems.json").write_text(json.dumps(problems, ensure_ascii=False, indent=2), encoding="utf-8")
             total = sum(len(v) for v in problems.values())
             print(f"⚠ Found {total} issues -> scan_problems.json")
           else:
             print("No issues found.")
-
           PY
 
-      - name: Commit manifest & indexes
+      - name: Auto-commit to CI branch
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(manifest): build manifest & indexes (generic detection + fixes)"
+          # Wichtig: NICHT direkt auf main pushen
+          branch: ci/manifest-update
+          create_branch: true
           file_pattern: |
             manifest.json
             indexes/**
             scan_problems.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "chore(manifest): update manifest & indexes"
+          commit-message: "chore(manifest): update manifest & indexes"
+          body: |
+            This PR updates `manifest.json` and `indexes/*`.
+            - Generic detection for lang/set/faction
+            - Normalized detected.rarity
+            - Reports faction mismatches in `scan_problems.json`
+          branch: ci/manifest-update
+          delete-branch: true
