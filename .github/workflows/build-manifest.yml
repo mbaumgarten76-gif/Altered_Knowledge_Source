@@ -1,4 +1,4 @@
-name: Build Manifest (no local Python needed)
+name: Build Manifest (generic detection)
 
 on:
   workflow_dispatch: {}
@@ -23,7 +23,7 @@ jobs:
       - name: Scan repo and generate manifest & indexes
         run: |
           python - <<'PY'
-          import json, re, os, hashlib
+          import json, os, hashlib, re
           from pathlib import Path
           from datetime import datetime, timezone
 
@@ -32,11 +32,6 @@ jobs:
           OUTDIR = REPO / "indexes"
           OUTDIR.mkdir(parents=True, exist_ok=True)
 
-          LANG = re.compile(r"/(EN|DE|FR|ES|IT|PT|PL|RU|JA|ZH)/", re.I)
-          FACTION = re.compile(r"/(AXIOM|AX|BRAVOS|BR|LYRA|LY|OR|YZMIR|YZ|ALIZE|AZ|KAIJU|KJ)/", re.I)
-          SETCODE = re.compile(r"/(CORE|COREKS|ALIZE|CYCLONE|BREEZE|TEMPEST|STORM|AXIOM|BRAVOS|LYRA|OR|YZMIR)/", re.I)
-          RARITY = re.compile(r"/(COMMON|C|RARE|R|EPIC|E|LEGENDARY|L|MYTHIC|M)/", re.I)
-
           def sha256(p: Path):
             h = hashlib.sha256()
             with p.open('rb') as f:
@@ -44,21 +39,17 @@ jobs:
                 h.update(chunk)
             return h.hexdigest()
 
-          def meta_from_path(path: str):
-            m = {}
-            if (g:=LANG.search(path)): m["lang"] = g.group(1).upper()
-            if (g:=FACTION.search(path)): m["faction"] = g.group(1).upper()
-            if (g:=SETCODE.search(path)): m["set"] = g.group(1).upper()
-            if (g:=RARITY.search(path)):
-              r = g.group(1).upper()
-              m["rarity"] = {"COMMON":"C","C":"C","RARE":"R","R":"R","EPIC":"E","E":"E","LEGENDARY":"L","L":"L","MYTHIC":"M","M":"M"}.get(r,r)
-            return m
-
-          def kind(top):
+          def kind_from_top(top: str) -> str:
             return {
               "CARDS":"card","COLLECTION":"collection","RULES":"rule",
               "SETS":"set","DECKS":"deck","HISTORY":"history"
             }.get(top,"other")
+
+          def normalize_rarity(r: str) -> str:
+            if not r: return r
+            r = r.upper()
+            mapr = {"COMMON":"C","C":"C","RARE":"R","R":"R","EPIC":"E","E":"E","LEGENDARY":"L","L":"L","MYTHIC":"M","M":"M"}
+            return mapr.get(r, r)
 
           now = datetime.now(timezone.utc).isoformat()
           manifest = {}
@@ -68,65 +59,89 @@ jobs:
             base = REPO / top
             if not base.exists(): 
               continue
+
             for p in base.rglob("*"):
               if p.is_dir(): 
                 continue
+
               rel = p.relative_to(REPO).as_posix()
               entry = {
                 "path": rel,
                 "size": p.stat().st_size,
                 "mtime": datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc).isoformat(),
-                "kind": kind(top),
+                "kind": kind_from_top(top),
                 "sha256": sha256(p),
-                "detected": meta_from_path("/"+rel+"/"),
+                "detected": {},
                 "scanned_at": now
               }
+
+              # ----- GENERISCHE ERKENNUNG AUS PFAD -----
+              # Erwartetes Layout bei Karten: CARDS/<LANG>/<SET>/<FACTION>/...
+              parts = rel.split("/")
+              if parts[0] == "CARDS" and len(parts) >= 4:
+                entry["detected"]["lang"] = parts[1].upper()
+                entry["detected"]["set"] = parts[2].upper()
+                entry["detected"]["faction"] = parts[3].upper()
+
+              # JSON einlesen & meta Felder extrahieren
               if p.suffix.lower() == ".json":
                 try:
                   data = json.loads(p.read_text(encoding="utf-8"))
                   entry["valid_json"] = True
                   if isinstance(data, dict):
+                    meta = {}
                     for k in ("id","ref","reference_id","name","type","rarity","faction","set","lang"):
-                      if k in data:
-                        entry.setdefault("meta",{})[k] = data[k]
+                      if k in data and data[k] is not None:
+                        meta[k] = data[k]
+                    if meta:
+                      entry["meta"] = meta
+
+                    # detected.rarity aus meta übernehmen, falls noch leer
+                    rarity_from_meta = normalize_rarity(str(meta.get("rarity","")))
+                    if rarity_from_meta and not entry["detected"].get("rarity"):
+                      entry["detected"]["rarity"] = rarity_from_meta
+
                 except Exception as e:
-                  problems.setdefault(rel,[]).append(f"JSON error: {type(e).__name__}: {e}")
+                  problems.setdefault(rel, []).append(f"JSON error: {type(e).__name__}: {e}")
+
               manifest[rel] = entry
 
-          # Write manifest
+          # MANIFEST schreiben
           (REPO/"manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-          # Minimal indexes
+          # ----- INDEXE -----
           def dump(obj, name):
             (OUTDIR/name).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
-          cards = [v for v in manifest.values() if v.get("kind")=="card"]
-          sets  = [v for v in manifest.values() if v.get("kind")=="set"]
-          rules = [v for v in manifest.values() if v.get("kind")=="rule"]
-          decks = [v for v in manifest.values() if v.get("kind")=="deck"]
-          history=[v for v in manifest.values() if v.get("kind")=="history"]
-          collection=[v for v in manifest.values() if v.get("kind")=="collection"]
+          cards      = [v for v in manifest.values() if v.get("kind")=="card"]
+          sets_list  = [v for v in manifest.values() if v.get("kind")=="set"]
+          rules_list = [v for v in manifest.values() if v.get("kind")=="rule"]
+          decks_list = [v for v in manifest.values() if v.get("kind")=="deck"]
+          hist_list  = [v for v in manifest.values() if v.get("kind")=="history"]
+          coll_list  = [v for v in manifest.values() if v.get("kind")=="collection"]
 
+          # Karten nach Set gruppiert (robust auch für neue Codes)
           cards_index = {}
           for e in cards:
-            d=e.get("detected",{})
-            sc=d.get("set","UNKNOWN")
-            cards_index.setdefault(sc,[]).append({
+            d = e.get("detected", {}) or {}
+            setcode = (d.get("set") or "UNKNOWN").upper()
+            cards_index.setdefault(setcode, []).append({
               "path": e["path"],
               "lang": d.get("lang"),
               "faction": d.get("faction"),
-              "rarity": d.get("rarity") or (e.get("meta",{}) or {}).get("rarity"),
-              "name": (e.get("meta",{}) or {}).get("name"),
-              "id":   (e.get("meta",{}) or {}).get("id") or (e.get("meta",{}) or {}).get("ref") or (e.get("meta",{}) or {}).get("reference_id"),
+              "rarity": d.get("rarity") or ((e.get("meta") or {}).get("rarity")),
+              "name": (e.get("meta") or {}).get("name"),
+              "id":   (e.get("meta") or {}).get("id") or (e.get("meta") or {}).get("ref") or (e.get("meta") or {}).get("reference_id"),
             })
 
           dump(cards_index, "cards_index.json")
-          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in sets}, "sets_index.json")
-          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in rules}, "rules_index.json")
-          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in decks}, "decks_index.json")
-          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}) } for e in history}, "history_index.json")
-          dump({e["path"]:{ "sha256":e["sha256"], "detected":e.get("detected",{}), "size":e["size"] } for e in collection}, "collection_index.json")
+          dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {})} for e in sets_list}, "sets_index.json")
+          dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {})} for e in rules_list}, "rules_index.json")
+          dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {})} for e in decks_list}, "decks_index.json")
+          dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {})} for e in hist_list}, "history_index.json")
+          dump({e["path"]: {"sha256": e["sha256"], "detected": e.get("detected", {}), "size": e["size"]} for e in coll_list}, "collection_index.json")
 
+          # Probleme protokollieren (nicht fatal)
           if problems:
             (REPO/"scan_problems.json").write_text(json.dumps(problems, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"Found JSON issues in {len(problems)} files (see scan_problems.json).")
@@ -137,7 +152,7 @@ jobs:
       - name: Commit manifest & indexes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(manifest): build manifest.json & indexes via CI"
+          commit_message: "chore(manifest): build manifest & indexes (generic detection)"
           file_pattern: |
             manifest.json
             indexes/**
