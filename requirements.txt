@@ -1,0 +1,4 @@
+# Keine externen Abhängigkeiten notwendig – Standardbibliothek reicht.
+# Optional (für spätere Erweiterungen):
+# pydantic>=2.7
+# jsonschema>=4.22
